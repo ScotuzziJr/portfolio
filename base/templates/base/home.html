@@ -1,0 +1,96 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>márcio jr. | dev backend </title>
+
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    </head>
+    <body>
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="card card-body">
+                        <img id="profile-pic" src="{% static 'img/marcprofile.jpg' %}" alt="Foto de perfil">
+                        <hr>
+                        <h4 class="text-center"><strong>&lt;olá, mundo&gt;</strong></h4>
+                        <p class="text-center">eu sou o márcio, estudante de ciência da computação e desenvolvedor backend.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-9">
+                    <div class="card card-body h-100">
+                        <h4 class="text-justify"><strong>Sobre mim</strong></h4>
+                        <hr>
+
+                        <p class="text-justify">Eu possuo experiência com <strong>desenvolvimento backend</strong>, atuando com <strong>Python</strong> como linguagem principal em conjunto com frameworks como <strong>Django</strong>, <strong>Flask</strong>, <strong>FastAPI</strong> e <strong>SQLAlchemy</strong>. Eu também trabalhei em projetos com <strong>Javascript</strong> sendo usado no <strong>backend</strong> com o <strong>Node</strong>.</p>
+                        
+                        <p class="text-justify">Apesar de me interessar mais por <strong>backend</strong>, eu possuo conhecimento básico em tecnologias usadas no <strong>frontend</strong>, como <strong>HTML</strong>, <strong>CSS</strong> e <strong>React</strong>.</p>
+
+                        <p class="text-justify">Você pode entrar em contato comigo:</p>
+
+                        <div class="cotainer d-flex justify-content-around">
+                            <a class="btn btn-dark w-25 p-3 d-flex justify-content-around" href="https://www.linkedin.com/in/m%C3%A1rcio-scotuzzi-junior-843041193/" target="_blank">
+                                <i class="bi bi-linkedin"></i> Linkedin
+                            </a>
+    
+                            <a class="btn btn-dark w-25 p-3 d-flex justify-content-around" href="https://github.com/ScotuzziJr" target="_blank">
+                                <i class="bi bi-github"></i> Github
+                            </a>
+                            
+                            <button onclick="copyEmail()" type="button" class="btn btn-dark w-25 p-3 d-flex justify-content-around">
+                                <i class="bi bi-google"></i> Gmail
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="card card-body">
+                        <h4 class="text-justify">Experiência</h4>
+                        <hr>
+                        <p class="text-justify">Eu atuo como estagiário de desenvolvimento de software na <strong>UP4 Invest</strong> desde 2022, trabalhando em soluções voltadas para o <strong>mercado financeiro</strong>. Eu tive a oportunidade de desenvolver e documentar <strong>API's</strong>, automações focadas em <strong>Web Scrapping</strong> e <strong>Robotic Process Automation (RPA)</strong>, além de interfaces para <strong>aplicações web</strong>.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-6">
+                    <div class="card card-body h-100">
+                        <h4>Linguagens e tecnologias</h4>
+                        <hr>
+                        <p class="text-justify">Aqui estão as principais linguagens de programação e tecnologias que eu possuo conhecimento:</p>
+                        
+                        <div class="container d-flex justify-content-around">
+                            <button type="button" class="btn btn-outline-dark">Python</button>
+                            <button type="button" class="btn btn-outline-dark">Node</button>
+                            <button type="button" class="btn btn-outline-dark">React</button>
+                            <button type="button" class="btn btn-outline-dark">PostgreSQL</button>
+                            <button type="button" class="btn btn-outline-dark">Linux</button>
+                            <button type="button" class="btn btn-outline-dark">Django</button>
+                            <button type="button" class="btn btn-outline-dark">FastAPI</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function copyEmail() {
+                navigator.clipboard.writeText
+                    ("scotuzzijunior@gmail.com");
+                
+                alert("Email copiado para área de transferência");
+                
+            }
+        </script>
+    </body>
+</html>
